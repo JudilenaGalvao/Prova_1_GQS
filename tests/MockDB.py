@@ -14,6 +14,14 @@ class MockBD(TestCase):
 
 
 
+<<<<<<< HEAD
+=======
+        query_create_professsor = """CREATE TABLE Professor (
+                                  id int NOT NULL PRIMARY KEY ,
+                                  nome text NOT NULL
+                                )"""
+
+>>>>>>> fcdcd4a6747ae1e2efec60fbc45dda452df3e1f3
         query_create_turma = """CREATE TABLE Turma (
                              id int NOT NULL PRIMARY KEY ,
                              nome text NOT NULL,
@@ -38,6 +46,10 @@ class MockBD(TestCase):
                                         )"""
 
         try:
+<<<<<<< HEAD
+=======
+            cursor.execute(query_create_professsor)
+>>>>>>> fcdcd4a6747ae1e2efec60fbc45dda452df3e1f3
             cursor.execute(query_create_turma)
             cursor.execute(query_create_aluno)
             cursor.execute(query_create_media_aluno_turma)
@@ -47,6 +59,14 @@ class MockBD(TestCase):
         else:
             print("Criação das tabelas: OK")
 
+<<<<<<< HEAD
+=======
+        query_insert_professor = """INSERT INTO Professor (id, nome) VALUES
+                                    (1, 'Judilena'),
+                                    (2, 'Romulo'),
+                                    (3, 'Leticia'),
+                                    (4, 'Joao')"""
+>>>>>>> fcdcd4a6747ae1e2efec60fbc45dda452df3e1f3
 
         query_insert_turma = """INSERT INTO Turma (id, nome, codigo) VALUES
                                     (1, 'POO', 'TAD0202'),
@@ -77,6 +97,10 @@ class MockBD(TestCase):
 
 
         try:
+<<<<<<< HEAD
+=======
+            cursor.execute(query_insert_professor)
+>>>>>>> fcdcd4a6747ae1e2efec60fbc45dda452df3e1f3
             cursor.execute(query_insert_turma)
             cursor.execute(query_insert_aluno)
             cursor.execute(query_insert_media_aluno_turma)
@@ -102,6 +126,10 @@ class MockBD(TestCase):
         cursor = con.cursor()
 
         try:
+<<<<<<< HEAD
+=======
+            cursor.execute("DROP TABLE Professor")
+>>>>>>> fcdcd4a6747ae1e2efec60fbc45dda452df3e1f3
             cursor.execute("DROP TABLE Turma")
             cursor.execute("DROP TABLE Aluno")
             cursor.execute("DROP TABLE Media_aluno_turma")
